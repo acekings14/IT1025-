@@ -22,48 +22,54 @@ namespace Adam_Davis_IT1025_Section_1assignment
             double totalInches;
             double centimeterft;
             double centimeterin;
-            double totalcentimeters; 
+            double totalcentimeters;
+
             System.Console.Write("What is your firstName? ");
-
             firstName = System.Console.ReadLine();
-
+            
             System.Console.Write("What is your middleIntial? ");
-
             middleIntial = System.Console.ReadLine();
+           
+           
 
 
             System.Console.Write("What is your lastName? ");
-
             lastName = System.Console.ReadLine();
 
-            fullName = "firstName" + "middleIntial" + "lastname" + ".";
-            System.Console.Write ("firstName" + "middleIntial" + "lastname" + ".");
+
+
+            System.Console.Write(firstName + " " + middleIntial + "." + " " + lastName);
+           
 
             
 
             System.Console.Write("How tall are you? (ft) ");
-
             heightFeet = int.Parse(System.Console.ReadLine());
+            
 
 
             System.Console.Write("How many inches are you added to your base height in feet? ");
-
             heightInches = double.Parse(System.Console.ReadLine());
+
 
 
             totalInchesforft = heightFeet * inchesperfoot;
             centimeterft = totalInchesforft * centimeters;
             centimeterin = heightInches * centimeters;
             totalcentimeters = centimeterft + centimeterin;
+            System.Console.Write(totalcentimeters = centimeterft + centimeterin);
+
 
             System.Console.Write("How old are  you? ");
-            int.Parse(System.Console.ReadLine());
+            age = int.Parse(System.Console.ReadLine());
 
             System.Console.Write(" Are you a citizen?");
-            bool.Parse(System.Console.ReadLine());
+            isCitizen = bool.Parse(System.Console.ReadLine());
+            
+            canVote = isCitizen && age >= 18;
+            System.Console.WriteLine("Voter Eligibility:" + " " + canVote);
 
 
-           
         }
 
     }
